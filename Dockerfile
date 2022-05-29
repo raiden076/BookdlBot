@@ -11,6 +11,7 @@ WORKDIR /app
 COPY . /app
 
 # Install pip requirements
+RUN python -m pip install --upgrade pip
 RUN python -m pip install -r requirements.txt
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
